@@ -1,29 +1,28 @@
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import SideBar from './FrontPage/SideBar';
+import Navbar from './employee_components/Navbar';
+import EmployeeConfig from './employee_components/EmployeeConfig';
+import backgroundImage from './images/job.jpg';
 
-import { BrowserRouter, Routes,Route } from 'react-router-dom';
-import './App.css';
-import AddEmployee from './components/AddEmployee';
-import Navbar from './components/Navbar';
-import EmployeeList from './components/EmployeeList';
-import UpdateEmployee from './components/UpdateEmployee';
-
-function App() {
+function AppRoutes() {
   return (
-    <>
-  <BrowserRouter>
-  <Navbar/>
-
-      <Routes>
-          <Route index element={<EmployeeList/>}    />
-          <Route path="/" element={<EmployeeList/>} />
-          <Route path="/employeeList" element={<EmployeeList/>} />
-          <Route path="/addEmployee" element={<AddEmployee/>} />
-          <Route path="/editEmployee/:id" element={<UpdateEmployee/>} />
-      </Routes>
-  </BrowserRouter>
-    
-
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <div className="h-screen relative">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-60"
+          style={{
+            backgroundImage: `url(${backgroundImage})`
+          }}
+        ></div>
+        <div className="flex relative z-10">
+          <SideBar />
+          <EmployeeConfig />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default AppRoutes;
