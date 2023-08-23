@@ -10,7 +10,27 @@ const SideBar = () => {
             Add Employee
           </Link>
         </li>
-        {/* Add more sidebar items here */}
+      
+        <li>
+          <Link to="/addApplicant" className="block">
+            Add Applicant
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/addCompany" className="block">
+            Add Company
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/addJobInformation" className="block">
+           Add Job Information
+          </Link>
+        </li>
+
+
+
       </ul>
     </div>
   );

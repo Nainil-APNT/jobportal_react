@@ -1,9 +1,12 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import SideBar from './FrontPage/SideBar';
-import Navbar from './employee_components/Navbar';
 import EmployeeConfig from './employee_components/EmployeeConfig';
-import backgroundImage from './images/job.jpg';
+import backgroundImage from './FrontPage/job.jpg';
+import Navbar from './FrontPage/Navbar';
+import ApplicantConfig from './applicant_components/ApplicantConfig';
+import CompanyConfig from './company_components/CompanyConfig';
+import JobInformationConfig from './jobinformation_components/JobInformationConfig';
 
 function AppRoutes() {
   return (
@@ -19,6 +22,9 @@ function AppRoutes() {
         <div className="flex relative z-10">
           <SideBar />
           <EmployeeConfig />
+          <ApplicantConfig />
+          <CompanyConfig />
+          <JobInformationConfig />
         </div>
       </div>
     </BrowserRouter>
