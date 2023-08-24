@@ -7,25 +7,32 @@ import Navbar from './FrontPage/Navbar';
 import ApplicantConfig from './applicant_components/ApplicantConfig';
 import CompanyConfig from './company_components/CompanyConfig';
 import JobInformationConfig from './jobinformation_components/JobInformationConfig';
+import JobLocationConfig from './JobLocation/JobLocationConfig';
+import ApplicationDetailsConfig from './application_details_components/ApplicationDetailsConfig';
+import JobCategoryConfig from './JobCategory/JobCategoryConfig';
+
 
 function AppRoutes() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar/> */}
       <div className="h-screen relative">
-        <div
+     {/*    <div
           className="absolute inset-0 bg-cover bg-center opacity-60"
           style={{
             backgroundImage: `url(${backgroundImage})`
           }}
-        ></div>
+        ></div> */}
         <div className="flex relative z-10">
-          <SideBar />
+          <SideBar/>
           <EmployeeConfig />
           <ApplicantConfig />
           <CompanyConfig />
           <JobInformationConfig />
-        </div>
+          <JobLocationConfig/>
+          <ApplicationDetailsConfig />
+          <JobCategoryConfig />
+        </div> 
       </div>
     </BrowserRouter>
   );
